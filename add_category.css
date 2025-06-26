@@ -1,0 +1,160 @@
+header {
+    display: block;
+    background-color: white;
+    padding: 0px;
+    height: 50px;
+    margin-bottom: 7px;
+}
+
+
+.heading {
+
+    font-size: 28px;
+    font-weight: normal;
+    color: black;
+    margin-top: 8px;
+
+
+}
+
+.nav {
+
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.adjust {
+    display: flex;
+    margin-right: 30px;
+    margin-top: -5px;
+}
+
+.searchbar {
+
+    height: 30px;
+    width: 300px;
+    margin-left: 300px;
+    margin-top: 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+
+}
+
+.go {
+    margin-left: -5px;
+    margin-top: 5px;
+
+}
+
+.size {
+
+    width: 1000px;
+    display: flex;
+
+
+}
+.pages {
+    background-color: #5d4037;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.pages h3:hover {
+    transform: scale(1.04);
+}
+
+
+.logo {
+    border-radius: 50%;
+    margin-top: -5px;
+}.form-container {
+    width: 60%;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* padding: 40px; */
+    padding-left: 40px;;
+    padding-right: 65px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+.form-title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group input[type="number"]
+{
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group input[type="textarea"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height:40px;
+
+}
+.submit-btn {
+    display: block;
+    width: 120px;
+    padding: 10px;
+    background-color: darkblue;
+    border-color: darkblue;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #001f4d;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+.footer {
+    margin-top: 20px;
+    background-color: #5d4037;
+    color: white;
+    text-align: center;
+    height: 30px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.footer i {
+    margin-top: 5px;
+}

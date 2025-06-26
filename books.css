@@ -1,0 +1,182 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+.items h3:hover {
+    transform: scale(1.04);
+}
+
+
+.logo {
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+.img-size {
+    width: 150px;
+    height: 200px;
+    /* background-color: blue;
+    padding: 10px; */
+    margin-left: 24px;
+}
+
+/* .img-div{
+    
+    background-color: #e0f7fa;
+  
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width:200px;
+    height:350px;
+    padding: 20px;
+    margin-right: 90px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+.img-div:hover{
+    transform: scale(1.02);
+    background-color: #cfe8ff;
+    background-color:#4682b4;
+   
+} */
+.img-div {
+
+    background-color: whitesmoke;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    height: 350px;
+    /* padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px; */
+    padding: 20px;
+    margin-right: 70px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.img-div:hover {
+    transform: scale(1.05);
+    background-color: #cfe8ff;
+}
+
+/* .row1 {
+    display: flex;
+    padding-left: 30px;
+   
+    margin-bottom: 50px;
+} */
+ .row1 {
+    display: flex;
+    padding-left: 60px;
+    /* margin-left:20px; */
+    margin-bottom: 50px;
+}
+
+.text-div {
+    margin-left: 24px;
+}
+
+.buttons {
+    display: flex;
+    padding-left: 5px;
+}
+
+.btn {
+    margin-right: 5px;
+    padding: 5px;
+    background-color: #c9302c;
+    border-color: #c9302c;
+    /* background-color: #3498db; */
+    color: white;
+    border-radius: 3px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+
+
+.price-btn {
+    background-color: #27ae60;
+    border-color: #27ae60;
+    color: white;
+    border-radius: 3px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #FF0000;
+    /* Brighter red */
+    color: #fff;
+    transform: scale(1.08);
+    /* Slightly enlarges */
+    /* box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); */
+    /* Strong red glow */
+    border: 1px solid white;
+    /* White border for contrast */
+}
+.price-btn:hover {
+    background-color: green; /* Darker green */
+    color: #fff;
+    transform: scale(1.08); /* Slightly enlarges */
+    border: 1px solid white; /* White border for contrast */
+}
+/* .btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+} */
+.trending-container {
+    display: flex;
+    justify-content: space-around;
+
+    padding-right: 30px;
+}
+
+.trending-size {
+    width: 200px;
+    height: 250px;
+}
+
+.trending-container div {
+    width: 175px;
+}
+
+.trending-book-details {
+    margin-left: 5%;
+    ;
+}
+
+.first-div {
+    margin-top: 15px;
+
+    background-color: #fcfcfc;
+    border: 1px solid #eaeaea;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+.second-div {
+    margin-top: 15px;
+    margin-left: 75px;
+    margin-right: 75px;
+    background-color: #fcfcfc;
+    border: 1px solid #eaeaea;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+.trending-size:hover{
+    transform: scale(1.05);
+    /* filter: brightness(120%);
+   */
+       
+    
+}

@@ -1,0 +1,18 @@
+.footer {
+    padding: 2%;
+    display: flex;
+    background-color: #5d4037;
+    color: white;
+    justify-content: space-around;
+    margin-bottom: -8px;
+}
+
+.final-footer {
+    padding-top: 30px;
+    display: flex;
+    background-color: #5d4037;
+    justify-content: space-around;
+    padding-bottom: 1%;
+    color: white;
+    margin-top: -8px;
+}

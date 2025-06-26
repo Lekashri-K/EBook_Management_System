@@ -1,0 +1,384 @@
+<?php
+session_start();
+include("configuration.php");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="test_edit.css?v=<?php echo time(); ?>">
+        <link rel="stylesheet" href="sidebar-design.css?v=<?php echo time(); ?>">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body style="background-color:white;">
+        <div style="background-color:#5d4037;height:15px;">
+
+        </div>
+        <div class="header">
+            <style>
+                .signin {
+                    background-color: green;
+                    margin: 5px;
+                    padding: 5px;
+                    color: white;
+                    height: 20px;
+                    margin-top: -5px;
+                    border-radius: 8%;
+                    text-decoration: none;
+                    display: inline-block;
+                    transition: transform 0.2s ease, filter 0.2s ease;
+                }
+
+                .signin:hover {
+
+                    transform: scale(1.05);
+                }
+
+                .login {
+                    background-color: darkblue;
+                    margin: 5px;
+                    padding: 5px;
+                    color: white;
+                    height: 20px;
+                    margin-top: -5px;
+                    border-radius: 8%;
+                    text-decoration: none;
+                    display: inline-block;
+                    transition: transform 0.2s ease, filter 0.2s ease;
+
+                }
+
+                .logout {
+                    background-color: #c9302c;
+                    margin: 5px;
+                    padding: 5px;
+                    color: white;
+                    height: 20px;
+                    margin-top: 10px;
+                    border-radius: 8%;
+                    text-decoration: none;
+                    transition: transform 0.2s ease, filter 0.2s ease;
+                }
+
+                .logout:hover {
+                    background-color: #c9302c;
+                    box-shadow: 0px 0px 10px rgba(217, 83, 79, 0.8);
+                }
+
+                .login:hover {
+
+                    transform: scale(1.05);
+                }
+
+                /* .go-button {
+    margin-left: 10px;
+    background-color: #144250;
+    margin: 5px;
+    padding: 10px;
+    color: white;
+    border-radius: 8%;
+    height: 15px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    
+} */
+                .go-button {
+                    background-color: #144250;
+                    border-color: #144250;
+                    font-size: 12px;
+                    padding: 8px;
+                    color: white;
+                    border-radius: 8%;
+                    height: 34px;
+                    transition: transform 0.2s ease, filter 0.2s ease;
+                    margin-top: 11px;
+                }
+
+                .go-button:hover {
+                    transform: scale(1.05);
+                    filter: brightness(1.1);
+                }
+            </style>
+
+
+            <div class="nav">
+                <div>
+                    <img src="logo.jpeg" alt="image not found" width="60px" height="60px" class="logo" ;>
+                    </img>
+                </div>
+                <div class="heading">
+                    <i><b>E Book Galaxy</b></i>
+                </div>
+                <!-- <div class="size">
+    <div>
+        <input class="searchbar" placeholder="  Search by title name">
+
+    </div>
+    <div class="go">
+        <h5 class="go-button">Search</h5>
+    </div>
+</div> -->
+                <div class="size">
+                    <form method="GET" action="search.php" style="display: flex;">
+                        <input class="searchbar" name="search" placeholder="  Search by title name" value="<?php if (isset($_GET['search']))
+                            echo $_GET['search']; ?>">
+                        <button type="submit" class="go-button">Search</button>
+                    </form>
+                </div>
+                <div class="adjust">
+                    <style>
+                        .profile_pic:hover {
+                            transform: scale(1.05);
+                        }
+                    </style>
+                    <?php
+                    if (!isset($_SESSION['name'])) {
+                        $_SESSION['redirect_back'] = $_SERVER['REQUEST_URI'];
+                    } else {
+                        $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
+                    }
+                    ?>
+                    <?php if (isset($_SESSION['name'])) { ?>
+                        <img src="profile.jpeg" id="logout-btn" class="profile_pic"
+                            style="width:40px;height:30px;border-radius:60%;margin-top:15px;margin-right:10px;cursor:pointer" />
+                        <h4><a href="logout.php" class="logout"><i class="fa-solid fa-user-plus fa-sm"
+                                    style="margin-right:5px"></i>Logout</a></h4>
+
+                    <?php } else { ?>
+                        <h4><a href="login.php" class="login"><i class="fa-solid fa-user-plus fa-sm"
+                                    style="margin-right:5px"></i>Login</a></h4>
+                        <h4><a href="register.php" class="signin"><i class="fa-solid fa-right-to-bracket fa-sm"
+                                    style="margin-right:5px"></i>Signup</a></h4>
+                    <?php } ?>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="pages" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="items" style="display:flex">
+                <h3>
+                    <a href="index.php" style="color:white; text-decoration: none; margin-right:20px">
+                        <i class="fa-solid fa-house-chimney fa-sm"
+                            style="color:white;margin-right:8px;margin-left:5px"></i>Home</a>
+                </h3>
+                <!-- <h3 style="margin-right:15px"><i class="fa-solid fa-list fa-sm" style="color:white;margin-right:8px"></i>Categories</h3> -->
+                <h3>
+                    <a href="index.php#category-image" style="color:white; text-decoration: none; margin-right:20px;">
+                        <i class="fa-solid fa-list fa-sm" style="color:white;margin-right:8px;"></i>Categories</a>
+                </h3>
+                <h3>
+                    <a href="about.php" style="color:white; text-decoration: none; margin-right:20px">
+                        <i class="fa-solid fa-address-card fa-sm" style="color:white;margin-right:8px"></i>About Us</a>
+                </h3>
+                <h3>
+                    <a href="review.php" style="color:white; text-decoration: none; margin-right:20px"><i
+                            class="fa-solid fa-magnifying-glass fa-sm"
+                            style="color:white;margin-right:8px"></i>Reviews</a>
+                </h3>
+
+            </div>
+            <div class="contact" style="display:flex;margin-right:10px">
+                <h4><i class="fa-solid fa-person-circle-question" style="color:black;margin-right:5px"></i><a
+                        href="help.php">Q&A Spot</a></h4>
+                <h4><i class="fa-solid fa-user-tie" style="color:black;margin-right:5px"></i><a
+                        href="contact.php">Contact
+                        Us</a></h4>
+            </div>
+        </div>
+
+        <?php
+        if (isset($_GET['category_id'])) {
+            $category_id = $_GET['category_id'];
+
+            // Fetch the category name
+            $query = "SELECT category_name,category_des FROM categories WHERE category_id = $category_id";
+            $result = mysqli_query($con, $query);
+
+            if ($result) {
+                $row = mysqli_fetch_assoc($result); ?>
+                <div class="first-div">
+                    <center>
+                        <h2 style="color:#0f172a;font-size:26px">Genre > <?php echo $row['category_name']; ?></h2><br>
+
+                        <p style="font-size:18px;margin-top:-15px"> <?php echo $row['category_des']?></p>
+                    </center>
+                </div>
+                <?php
+            } else {
+                echo "Error in query: " . mysqli_error($con);
+            }
+
+            // Fetch books from the selected category
+            $query_books = "SELECT * FROM books WHERE category_id = $category_id order by book_id desc";
+            $result_books = mysqli_query($con, $query_books);
+
+            $books = [];
+            while ($book_row = mysqli_fetch_assoc($result_books)) {
+                $books[] = $book_row;
+            }
+            ?>
+            <div class="second-div">
+                <!-- <h2>Adventure Books</h2> -->
+                <center>
+                    <h2 style="color:#0f172a;font-size:26px"><?php echo $row['category_name']; ?> Books</h2><br>
+                </center>
+                <?php for ($i = 0; $i < count($books); $i += 4) { ?>
+                    <div class="row1">
+                        <?php for ($j = $i; $j < $i + 4 && $j < count($books); $j++) { ?>
+                            <div class="img-div">
+                                <img src="<?php echo $books[$j]['book_img']; ?>" class="img-size">
+                                <div class="text-div">
+                                    <p style="font-size:18px"><?php echo $books[$j]['title']; ?></p>
+                                    <p style="font-size:18px"><?php echo $books[$j]['author']; ?></p>
+                                    <div class="buttons">
+                                        <a href="book-details.php?book_id=<?php echo $books[$j]['book_id']; ?>" class="btn"
+                                            style="text-decoration:none">View
+                                            Details</a>
+                                        <button class="price-btn">₹250</button>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                <?php } ?>
+            </div>
+        <?php } ?>
+        <div class="second-div">
+
+            <?php
+            $s_query = "select * from books order by book_id desc limit 5";
+            $s_result = mysqli_query($con, $s_query);
+            $s_books = [];
+            while ($s_row = mysqli_fetch_array($s_result)) {
+                $s_books[] = $s_row;
+            }
+            ?>
+            <h2 style="color:#0f172a;font-size:25px">Recently Added Books</h2><br>
+
+            <div class="trending-container">
+                <?php foreach ($s_books as $b) { ?>
+                    <div>
+                        <form action="" method="post">
+                            <a href="book-details.php?book_id=<?php echo $b['book_id']; ?>">
+                                <img src="<?php echo $b['book_img'] ?>" class="trending-size" />
+                            </a>
+                        </form>
+                        <div class="trending-book-details">
+                            <h3 style="font-size: 20px;"><?php echo $b['title'] ?></h3>
+                            <p style="font-size:large;"><?php echo $b['author'] ?></p>
+                            <p style="color:red; font-size:large"><?php echo $b['price'] ?></p>
+                            </p>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+            <br>
+
+
+        </div>
+        <div class="sidebar">
+            <header>
+                <div class="close-btn">
+                    <i class=" fa-solid fa-xmark fa-xs"></i>
+                </div>
+                <div class="img">
+                    <img src="profile1.jpeg">
+                </div>
+                <h4><?php
+                if (isset($_SESSION['full_name'])) {
+                    ?>
+                        <center>
+                            <h2 style="margin-top:-3px"><?php echo "Welcome " . htmlspecialchars($_SESSION['full_name']); ?>
+                            </h2>
+                        </center>
+                    <?php } else {
+                    echo "Guest User";
+                }
+                ?>
+                </h4>
+            </header>
+
+            <div class="menu">
+                <div class="item">
+                    <a href="edit-profile.php">
+                        <i class="fa-solid fa-pencil"></i>
+                        Edit Profile
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="password.php">
+                        <i class="fa-solid fa-key"></i>
+                        Change Password
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="contact.php">
+                        <i class="fa-solid fa-circle-info"></i>
+                        Help and support
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="my_orders.php">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Order Details
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="logout.php">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Logout
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+
+            // open menu button
+            document.addEventListener("DOMContentLoaded", function () {
+                const searchBtn = document.querySelector("#logout-btn");
+                const sidebar = document.querySelector(".sidebar");
+
+                searchBtn.addEventListener("click", function () {
+                    sidebar.classList.add("active");
+                    menuBtn.style.visibility = "hidden";
+                });
+
+                //close button event
+                const closeBtn = document.querySelector(".close-btn");
+                closeBtn.addEventListener("click", function () {
+                    sidebar.classList.remove("active");
+                    menuBtn.style.visibility = "hidden";
+                });
+
+            });
+        </script>
+
+
+    </body>
+
+    </html>

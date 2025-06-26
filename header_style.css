@@ -1,0 +1,213 @@
+.header {
+    display: block;
+    background-color: white;
+    padding: 0px;
+    height: 50px;
+    margin-bottom: 7px;
+}
+
+
+.heading {
+    /* font-family: 'Great Vibes',cursive; */
+    font-size: 28px;
+    font-weight: normal;
+    color: black;
+    margin-top: 8px;
+    /* text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); */
+
+}
+
+.nav {
+    /*include the search bar,go,register,login*/
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.adjust {
+    display: flex;
+    margin-right: 30px;
+    margin-top: -5px;
+}
+
+.searchbar {
+    /*search bar size*/
+    height: 30px;
+    width: 300px;
+    margin-left: 300px;
+    margin-top: 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+
+}
+
+.go {
+    margin-left: -5px;
+    margin-top: 5px;
+
+}
+
+.size {
+    /*search bar and go va oru div va vachu atha perusaakirukom that is login and register thalli varathukkaga*/
+    width: 1000px;
+    /* display: flex; */
+    /*background-color: green;*/
+
+}
+
+.contact a {
+    text-decoration: none;
+    color: black;
+}
+
+.contact h4 {
+   
+    padding: 4px;
+    border-radius: 2px;
+    margin-right: 15px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    background-color: white;
+}
+.contact h4:hover {
+    transform:scale(1.04);
+}
+
+.pages {
+    background-color: #5d4037;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+}
+.items h3:hover{
+    transform:scale(1.04);
+}
+
+
+.logo {
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+
+
+.footer {
+    padding: 2%;
+    display: flex;
+    background-color: #5d4037;
+    color: white;
+    justify-content: space-around;
+    margin-bottom: -8px;
+}
+
+.final-footer {
+    padding-top: 50px;
+    display: flex;
+    background-color: #5d4037;
+    justify-content: space-around;
+    padding-bottom: 3%;
+    color: white;
+    margin-top: -8px;
+}
+
+.logo {
+    border-radius: 50%;
+}
+
+.homepage-image {
+    background-image: url('girl.jpeg');
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align content to the left */
+    /* Add space from the left */
+}
+
+.image-text {
+    max-width: 700px;
+    color: #1a0004;
+    /* Ensure visibility */
+    padding: 20px;
+    padding-left: 200px;
+    /* height:400px; */
+
+}
+
+.trending-container {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.trending-size {
+    width: 200px;
+    height: 250px;
+}
+
+.trending-container div {
+    width: 175px;
+}
+
+.trending-book-details {
+    margin-left: 5%;
+    ;
+}
+
+
+
+.category-row {
+    padding-left:125px;
+    padding-right: 125px;
+    display: flex;
+    justify-content: flex-start;
+    gap:180px;
+    margin-top: 50px;
+    margin-bottom:50px;
+} 
+ 
+
+.r-image {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 300px;
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.r-image:hover {
+    transform: scale(1.05);
+}
+.category-name {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 7px;
+    text-align: center;
+}
+
+
+
+.anchor {
+    z-index: 10;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.footer h2 {
+    color: white;
+    text-decoration: none;
+    
+}

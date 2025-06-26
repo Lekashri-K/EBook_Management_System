@@ -1,0 +1,64 @@
+
+html {
+    scroll-behavior: smooth;
+}
+.items h3:hover{
+    transform:scale(1.04);
+}
+
+
+.logo {
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+
+
+.picture img{
+    margin-top: 10px;
+     width:400px;
+     height:400px;
+ }
+ .picture p{
+     margin-left: 100px;
+     margin-right: 100px;
+ }
+ 
+ .askquestion details {
+     margin-bottom: 10px;
+     border: 1px solid #ddd;
+     padding: 10px;
+     border-radius: 5px;
+     background-color: #f9f9f9;
+ }
+ .askquestion summary {
+     font-weight: bold;
+     cursor: pointer;
+ }
+ .askquestion{
+     margin-left: 320px;
+     margin-right: 310px;
+     
+ }
+ .faq-size{
+    font-size:18px;
+ }
+ .footer {
+    padding: 2%;
+    display: flex;
+    background-color: #5d4037;
+    color: white;
+    justify-content: space-around;
+    margin-bottom: -8px;
+}
+
+.final-footer {
+    padding-top: 30px;
+    display: flex;
+    background-color: #5d4037;
+    justify-content: space-around;
+    padding-bottom: 1%;
+    color: white;
+    margin-top: -8px;
+}
+
