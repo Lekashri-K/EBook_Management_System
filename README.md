@@ -72,13 +72,13 @@ It allows users to browse, purchase, and download digital books, with dynamic UI
 
 **⚙️ How It Works**  
 
-Backend PHP handles database operations, authentication, and RBAC.
+- Backend PHP handles database operations, authentication, and RBAC.
 
-Frontend HTML/CSS/JS dynamically displays books, categories, and order details.
+- Frontend HTML/CSS/JS dynamically displays books, categories, and order details.
 
-PHPMailer triggers transactional emails on successful orders.
+- PHPMailer triggers transactional emails on successful orders.
 
-Admin can manage books, users, and categories via a centralized dashboard.
+- Admin can manage books, users, and categories via a centralized dashboard.
 
 ------------------------------------
 
