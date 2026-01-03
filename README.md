@@ -88,7 +88,6 @@ Admin can manage books, users, and categories via a centralized dashboard.
 
 git clone https://github.com/Lekashri-K/Todo_list_deployment.git
 
-
 2. Import the database in MySQL.
 
 3. Update db_connection.php with your local credentials.
